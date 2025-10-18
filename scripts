@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class autoDoor : MonoBehaviour
+{
+    public Animator anim;
+
+
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            anim.SetTrigger("open");
+        }
+        if (other.CompareTag("Ai"))
+        {
+            anim.SetTrigger("open");
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            anim.SetTrigger("close");
+        }
+        if (other.CompareTag("Ai"))
+        {
+            anim.SetTrigger("close");
+        }
+    }
+}
