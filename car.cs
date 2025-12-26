@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,9 +37,9 @@ public class car : MonoBehaviour
     }
     void GetInput()
     {
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
-        isBrake = Input.GetKeyDown(KeyCode.Space);
+        horizontal = ControlFreak2.CF2Input.GetAxis("Horizontal");
+        vertical = ControlFreak2.CF2Input.GetAxis("Vertical");
+        isBrake = ControlFreak2.CF2Input.GetKeyDown(KeyCode.Space);
     }
     void HandleMotor()
     {
